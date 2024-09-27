@@ -1,5 +1,5 @@
-import React from 'react'
-import { FaInfoCircle, FaExclamationCircle, FaCheckCircle, FaExclamationTriangle, FaTimes } from 'react-icons/fa';
+import React from 'react';
+import { FaCheckCircle, FaExclamationCircle, FaExclamationTriangle, FaInfoCircle, FaTimes } from 'react-icons/fa';
 
 const alertStyles = {
   base: 'p-4 pl-5 pr-5 rounded-md flex items-center',
@@ -17,7 +17,7 @@ const alertStyles = {
   }
 };
 
-export default function TwixtAlert({ type = 'announcement', overwriteClass, title, desc, linkText, linkUrl, onClose }) {
+export default function TwixtAlert({ type = 'announcement', overwriteClass, title, desc, linkText, linkUrl, textColor, linkColor, onClose }) {
   const typeStyle = alertStyles.types[type] || alertStyles.types.announcement;
   const Icon = alertStyles.icons[type] || FaInfoCircle;
 
@@ -29,11 +29,11 @@ export default function TwixtAlert({ type = 'announcement', overwriteClass, titl
     <div className={`${alertStyles.base} ${typeStyle} ${overwriteClass}`}>
       <Icon className="mr-2" />
       <div className="flex-grow">
-        {title && <div className="font-bold">{title}</div>}
-        <div>{desc}</div>
+        {title && <div className={`${textColor} font-bold`} >{title}</div>}
+        <div className={`${textColor}`}>{desc}</div>
       </div>
       {linkText && linkUrl && (
-        <a href={linkUrl} className="ml-4 text-blue-500 hover:text-blue-700">
+        <a href={linkUrl} className={linkColor ? linkColor : "ml-4 text-blue-500 hover:text-blue-700"}>
           {linkText}
         </a>
       )}

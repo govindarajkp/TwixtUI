@@ -1,4 +1,3 @@
-import React from 'react';
 import TwixtAlert from '../../react/src/Alert.js';
 
 export default {
@@ -80,8 +79,12 @@ export const BorderColorChange = {
 
 export const TextColorChange = {
   args: {
-    title: 'Change Text Color',
+    title: 'dd',
     desc: 'The text color of this alert has been changed.',
-    overwriteClass: 'bg-orange-100 border-l-4 border-orange-500 text-black mx-4 p-2'
+    textColor: 'text-slate-400',
+    overwriteClass: 'bg-orange-100 border-l-4 border-orange-500 text-red mx-4 p-2',
+    linkColor: ' text-orange-700',
+    linkText: 'Google',
+    linkUrl: 'http://google.com'
   },
 };
