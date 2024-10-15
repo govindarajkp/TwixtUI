@@ -79,7 +79,7 @@ export const BorderColorChange = {
 
 export const TextColorChange = {
   args: {
-    title: 'dd',
+    title: 'Change Text Color',
     desc: 'The text color of this alert has been changed.',
     textColor: 'text-slate-400',
     overwriteClass: 'bg-orange-100 border-l-4 border-orange-500 text-red mx-4 p-2',
